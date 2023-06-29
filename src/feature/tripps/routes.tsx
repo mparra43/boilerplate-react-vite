@@ -3,7 +3,7 @@ import { Tripps } from './pages/Tripps'
 
 
 
-export const TransversalRoutes = () => {
+export const TrippsRoutes = () => {
   return (
     <Routes>
       <Route path='inicio' element={<Tripps/>} />
