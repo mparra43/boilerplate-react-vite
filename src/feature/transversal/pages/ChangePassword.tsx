@@ -1,5 +1,11 @@
+import { FormBasic, Layout } from "../components";
+
 export const ChangePassword = () => {
-  return <div>
-    ChangePassword
-  </div>;
+  return (
+    <div>
+      <Layout>
+        <FormBasic title="Cambiar contraseña" />
+      </Layout>
+    </div>
+  );
 };

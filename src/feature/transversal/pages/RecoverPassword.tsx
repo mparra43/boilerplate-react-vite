@@ -1,5 +1,9 @@
-export const RecoverPassword = ()=>{
-    return (
-        <div>RecoverPassword.tsx</div>
-    )
-}
+import { FormBasic, Layout } from "../components";
+
+export const RecoverPassword = () => {
+  return (
+    <Layout>
+      <FormBasic title="Recuperar contraseña" />
+    </Layout>
+  );
+};

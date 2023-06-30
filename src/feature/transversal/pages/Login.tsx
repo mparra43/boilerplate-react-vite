@@ -1,5 +1,9 @@
+import { FormBasic, Layout } from "../components";
+
 export const Login = () => {
-  return <div>
-    login
-  </div>;
+  return (
+    <Layout>
+      <FormBasic title="Inicia sesión" />
+    </Layout>
+  );
 };
