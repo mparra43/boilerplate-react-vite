@@ -1,11 +1,13 @@
 import { Navigate, RouteObject, useRoutes } from "react-router-dom";
 
-// import { useAuth } from '@/lib/auth'
+
 import { protectedRoutes } from "./protected";
 import { publicRoutes } from "./public";
+import { useTransversal } from "@/feature/transversal";
 
 export const AppRoutes = () => {
-  //   const { isAuthenticated } = useAuth()
+  const { isAuthenticated } = useTransversal();
+  console.log(isAuthenticated);
 
   const commonRoutes: RouteObject[] = [
     {
@@ -14,8 +16,8 @@ export const AppRoutes = () => {
     },
   ];
 
-  //   const routes = isAuthenticated ? protectedRoutes : publicRoutes
-  const routes = publicRoutes;
+   const routes = isAuthenticated ? protectedRoutes : publicRoutes
+
   const element = useRoutes([...commonRoutes, ...routes]);
 
   return <>{element}</>;

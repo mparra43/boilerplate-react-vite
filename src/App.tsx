@@ -1,6 +1,7 @@
-import {Suspense } from "react";
+import { Suspense } from "react";
 import { BrowserRouter } from "react-router-dom";
 import { AppRoutes } from "./routes";
+import { TransversalProvider } from "./feature/transversal";
 
 function App() {
   return (
@@ -11,9 +12,11 @@ function App() {
         </div>
       }
     >
-      <BrowserRouter>
-        <AppRoutes />
-      </BrowserRouter>
+      <TransversalProvider>
+        <BrowserRouter>
+          <AppRoutes />
+        </BrowserRouter>
+      </TransversalProvider>
     </Suspense>
   );
 }
